@@ -1,0 +1,108 @@
+================================================================================
+CARA MENJALANKAN APLIKASI SISTEM KEUANGAN LARAVEL 11
+================================================================================
+
+LANGKAH 1: STOP COMPOSER YANG SEDANG BERJALAN
+----------------------------------------------
+- Tekan Ctrl+C di terminal yang menjalankan composer
+- Atau tutup terminal/command prompt tersebut
+
+
+LANGKAH 2: JALANKAN SETUP OTOMATIS
+-----------------------------------
+1. Buka Command Prompt
+2. Ketik:
+   cd D:\xampp\htdocs\sistemkeuangan
+   SETUP_CEPAT.bat
+
+3. Script akan otomatis:
+   - Mengaktifkan PHP zip extension
+   - Install composer dependencies (CEPAT!)
+   - Generate application key
+   - Run database migrations
+   - Build assets
+
+4. Tunggu sampai selesai (sekitar 2-3 menit)
+
+
+LANGKAH 3: JALANKAN SERVER
+---------------------------
+Setelah setup selesai, jalankan:
+
+   D:\xampp\php\php.exe artisan serve
+
+Atau buka terminal baru dan ketik:
+   cd D:\xampp\htdocs\sistemkeuangan
+   D:\xampp\php\php.exe artisan serve
+
+
+LANGKAH 4: BUKA BROWSER
+------------------------
+Buka browser dan akses:
+
+   http://localhost:8000
+
+
+================================================================================
+FITUR APLIKASI
+================================================================================
+
+1. REGISTER & LOGIN
+   - Buat akun baru
+   - Login dengan akun yang sudah dibuat
+
+2. DASHBOARD
+   - Total pengeluaran hari ini (Rupiah)
+   - Grafik bar 7 hari terakhir
+   - 5 transaksi terakhir
+
+3. TRANSAKSI
+   - Tambah transaksi baru
+   - Edit transaksi
+   - Hapus transaksi
+   - Filter berdasarkan tanggal dan kategori
+
+4. LAPORAN
+   - Total per bulan
+   - Pie chart per kategori
+
+5. KATEGORI TERSEDIA:
+   - Makan
+   - Transport
+   - Rokok
+   - Belanja
+   - Hiburan
+   - Tagihan
+   - Lainnya
+
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+MASALAH: Port 8000 sudah digunakan
+SOLUSI: Gunakan port lain
+   D:\xampp\php\php.exe artisan serve --port=8080
+
+MASALAH: Error "vendor/autoload.php not found"
+SOLUSI: Composer install belum selesai, jalankan SETUP_CEPAT.bat
+
+MASALAH: Error database
+SOLUSI: Pastikan file database/database.sqlite sudah ada
+
+MASALAH: Tampilan tidak muncul dengan benar
+SOLUSI: Jalankan: npm run build
+
+
+================================================================================
+DOKUMENTASI LENGKAP
+================================================================================
+
+- PANDUAN_XAMPP.md  : Panduan lengkap untuk XAMPP
+- INSTALL.md        : Panduan instalasi manual
+- README.md         : Overview aplikasi
+
+
+================================================================================
+SELAMAT MENGGUNAKAN APLIKASI SISTEM KEUANGAN!
+================================================================================
